@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^https://dockersymfony6api-production.up.railway.app/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^https://dockersymfony6api-production.up.railway.app/$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
+
+</IfModule>
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+<IfModule mod_headers.c>
+Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+Header set Access-Control-Allow-Credentials true
+</IfModule>
+AddHandler application/x-httpd-php74 .php .php5 .php4 .php3
