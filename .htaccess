@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^https://dockersymfony6api-production.up.railway.app/$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^https://dockersymfony6api-production.up.railway.app/$
+RewriteCond %{HTTP_HOST} ^dockersymfony6api-production.up.railway.app/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.dockersymfony6api-production.up.railway.app$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
 
