@@ -32,3 +32,8 @@ client_api_login_check:
     path: /client_api/login_check
     controller: App\Controller\AuthController::getTokenclient
     methods: POST
+
+articles:
+    path: /articles
+    controller: App\Controller\ArticlesController::list
+    methods: GET
