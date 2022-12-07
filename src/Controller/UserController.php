@@ -29,6 +29,15 @@ class UserController extends  ApiController
     }
 
     /**
+     * @Route("/", name="user", methods={"GET"})
+     */
+    public function index2()
+    {
+        return $this->respondWithSuccess('hello');
+    }
+
+
+    /**
      * @Route("/user", name="user", methods={"GET"})
      */
     public function index()

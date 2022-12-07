@@ -2,6 +2,11 @@ controllers:
     resource: ../src/Controller/
     type: attribute
 
+index:
+    path: /
+    controller: App\Controller\UserController::index2
+    methods: GET
+
 user_index:
     path: /api/user
     controller: App\Controller\UserController::index
