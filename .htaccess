@@ -1,6 +1,6 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /app
-
-RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^(.*)$ public/index.php?$1 [L,QSA]
+RewriteBase /
+RewriteCond %{REQUEST_URI} !/public
+RewriteRule ^(.*)$ public/$1
+</IfModule>
